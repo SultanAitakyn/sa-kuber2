@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: back
+spec:
+    replicas: 2
+    selector:
+       matchLabels:
+          app: back-app
+    template:
+       metadata:
+          labels:
+             app: back-app
+       spec:
+          containers:
+          - name: back-django
+            image: aitakynsultan/task1back:v2
+            ports:
+              - name: back-django
+                containerPort: 8000

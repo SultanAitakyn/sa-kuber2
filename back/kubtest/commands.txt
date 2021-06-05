@@ -1,0 +1,2 @@
+docker build --tag aitakynsultan/k8s:v4 .
+docker run --name django_kub --publish 8000:8000 aitakynsultan/k8s:v4
